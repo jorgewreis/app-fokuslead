@@ -1,0 +1,8 @@
+# Formato:
+# tipo: descricao do commit
+#
+# Tipos comuns: feat, fix, refactor, docs, style, perf, test, chore,
+# build, ci, revert, deps, config, release, i18n, ux
+#
+# Exemplo:
+# docs: novo documento criado
