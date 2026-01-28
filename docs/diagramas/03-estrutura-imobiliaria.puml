@@ -1,0 +1,60 @@
+﻿@startuml
+
+title FokusLead - Estrutura Imobiliaria
+
+class Construtora {
+  +id: UUID
+  +nome: string
+  +cnpj: string
+  +status: string
+}
+
+class Empreendimento {
+  +id: UUID
+  +nome: string
+  +descricao: string
+  +status: string
+}
+
+class Imovel {
+  +id: UUID
+  +codigo: string
+  +valor: decimal
+  +status: ImovelStatus
+  +area: decimal
+  +quartos: int
+  +vagas: int
+}
+
+enum ImovelStatus {
+  DISPONIVEL
+  RESERVADO
+  VENDIDO
+}
+
+class TipoImovel {
+  +id: UUID
+  +nome: string
+}
+
+class Cidade {
+  +id: UUID
+  +nome: string
+  +uf: string
+}
+
+class Bairro {
+  +id: UUID
+  +nome: string
+}
+
+class InteresseCliente <<ref>>
+
+Construtora "1" -- "0..*" Empreendimento
+Empreendimento "0..1" -- "0..*" Imovel
+TipoImovel "1" -- "0..*" Imovel
+Cidade "1" -- "0..*" Bairro
+Bairro "1" -- "0..*" Imovel
+Imovel "1" -- "0..*" InteresseCliente
+
+@enduml

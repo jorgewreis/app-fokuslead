@@ -1,0 +1,25 @@
+﻿@startuml
+
+title FokusLead - Sequencia de Captura de Lead (WhatsApp)
+
+autonumber
+actor "Cliente" as Cliente
+participant "WhatsApp" as WhatsApp
+participant "API WhatsApp" as API
+participant "Integracao" as Integracao
+participant "Backend" as Backend
+participant "CRM" as CRM
+participant "Corretor" as Corretor
+
+Cliente -> WhatsApp: envia mensagem
+WhatsApp -> API: webhook de mensagem
+API -> Integracao: payload
+Integracao -> Backend: normaliza evento
+Backend -> CRM: registra lead
+CRM -> CRM: associa cliente existente
+CRM -> Corretor: notifica novo lead
+Corretor -> CRM: inicia atendimento
+CRM -> Backend: registra interacao
+Backend -> CRM: atualiza historico
+
+@enduml

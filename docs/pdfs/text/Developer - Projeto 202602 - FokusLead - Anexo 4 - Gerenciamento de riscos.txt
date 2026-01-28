@@ -1,0 +1,158 @@
+REIS DEVELOPER
+JORGE REIS - DESENVOLVEDOR FULLSTACK
+FokusLead
+FokusLead ONE FokusLead TEAM
+ANEXO COMPLEMENTAR 4
+GERENCIAMENTO DE RISCOS
+
+-- 1 of 6 --
+
+FokusLead
+ANEXO 4 - GERENCIAMENTO DE RISCOS 	REIS DEVELOPER - V 1.0
+Projeto: FokusLead
+Produto: FokusLead One (MVP)
+Versão: 1.0
+Responsável: Jorge Reis
+Data de início: Data atual
+Data-alvo de conclusão: 01 de junho de 2026
+1. Introdução e Objetivo
+Este documento tem como objetivo identificar, analisar, priorizar e definir
+estratégias de resposta aos principais riscos do Projeto FokusLead, com foco na
+entrega bem-sucedida do MVP do produto FokusLead One, dentro do prazo, escopo e
+nível de qualidade estabelecidos. O Gerenciamento de Riscos visa reduzir incertezas,
+antecipar problemas críticos e fornecer base estruturada para a tomada de decisão,
+assegurando maior previsibilidade e controle durante a execução do projeto.
+Este anexo complementa o Termo de Abertura do Projeto (TAP) e os Anexos 2 e
+3, atuando como referência formal para monitoramento contínuo de riscos ao longo do
+ciclo de vida do MVP.
+2. Abordagem de Gerenciamento de Riscos
+O projeto adota uma abordagem híbrida de gerenciamento de riscos,
+combinando:
+- Prevenção ativa para riscos críticos ou de alto impacto
+- Resposta planejada e monitoramento para riscos de menor severidade
+Essa abordagem permite foco eficiente nos riscos mais relevantes, sem gerar
+sobrecarga operacional desnecessária.
+3. Categorias de Risco Adotadas
+Os riscos do projeto foram classificados nas seguintes categorias:
+- Riscos Técnicos
+- Riscos de Prazo
+
+-- 2 of 6 --
+
+FokusLead
+ANEXO 4 - GERENCIAMENTO DE RISCOS 	REIS DEVELOPER - V 1.0
+- Riscos de Dependência Externa
+- Riscos de Qualidade
+- Riscos Legais / LGPD
+Essa categorização facilita a análise, priorização e definição de estratégias
+adequadas para cada tipo de risco.
+4. Metodologia de Avaliação de Riscos
+4.1 Escala de Avaliação
+Cada risco é avaliado com base em dois critérios:
+- Probabilidade (1 a 5)
+- 1 = Muito baixa
+- 5 = Muito alta
+- Impacto (1 a 5)
+- 1 = Impacto mínimo
+- 5 = Impacto crítico para o MVP
+4.2 Cálculo do Nível de Risco
+O nível de risco é determinado pela fórmula ponderada:
+Nível de Risco = (Probabilidade × 2) + (Impacto × 3)
+Essa ponderação atribui maior peso ao impacto, refletindo a criticidade de
+eventos que possam comprometer o prazo, a integridade do produto ou a
+conformidade legal. A pontuação final varia de 5 a 25, permitindo ordenação objetiva
+dos riscos.
+
+-- 3 of 6 --
+
+FokusLead
+ANEXO 4 - GERENCIAMENTO DE RISCOS 	REIS DEVELOPER - V 1.0
+5. Registro e Avaliação dos Riscos
+6. Estratégias de Resposta aos Riscos
+R1 – Mudança na API de terceiros
+Estratégia: Mitigar
+Ações:
+- Criação de camada de abstração para integrações
+- Desacoplamento do core do sistema
+- Monitoramento de versões e mudanças de política
+R2 – Estabilidade do sistema em picos de uso
+Estratégia: Transferir
+Ações:
+- Uso de infraestrutura gerenciada e escalável
+- Adoção de serviços externos para balanceamento de carga
+- Delegação da escalabilidade à camada de infraestrutura
+R3 – Controle de autenticação
+Estratégia: Mitigar
+Ações:
+
+-- 4 of 6 --
+
+FokusLead
+ANEXO 4 - GERENCIAMENTO DE RISCOS 	REIS DEVELOPER - V 1.0
+- Uso de padrões consolidados de autenticação
+- Bibliotecas maduras e bem testadas
+- Validação de fluxos e testes focados em segurança
+R4 – Validação de chave de registro para assinatura
+Estratégia: Transferir
+Ações:
+- Uso de gateway externo de pagamento e billing
+- Centralização da validação fora do core do sistema
+R5 – Performance do frontend
+Estratégia: Mitigar
+Ações:
+- Otimização de assets
+- Lazy loading
+- Foco de performance nas telas principais
+R6 – Ajustes para múltiplas resoluções e dispositivos
+Estratégia: Mitigar
+Ações:
+- Layout responsivo consistente
+- Uso de grid system e breakpoints definidos
+- Testes em múltiplas resoluções
+R7 – Tempo de desenvolvimento
+Estratégia: Mitigar
+Ações:
+- Priorização rígida do MVP
+- Controle formal de mudanças de escopo
+- Revisão contínua do cronograma
+R8 – Visibilidade indevida de dados pessoais (LGPD)
+Estratégia: Mitigar
+Ações:
+- Controle rigoroso de acesso
+- Mascaramento de dados sensíveis
+- Revisões periódicas de segurança
+
+-- 5 of 6 --
+
+FokusLead
+ANEXO 4 - GERENCIAMENTO DE RISCOS 	REIS DEVELOPER - V 1.0
+R9 – Experiência do usuário em dispositivos móveis
+Estratégia: Mitigar
+Ações:
+- Testes frequentes em mobile
+- Ajustes contínuos de UX
+- Validação dos fluxos críticos
+R10 – Adaptabilidade do código para plataformas futuras
+Estratégia: Mitigar
+Ações:
+- Arquitetura modular
+- Separação clara de camadas
+- Adoção de boas práticas de desenvolvimento
+7. Monitoramento e Revisão dos Riscos
+O monitoramento dos riscos será contínuo e integrado ao acompanhamento do
+cronograma e do escopo do projeto, observando:
+- Alterações no nível de risco
+- Materialização de eventos previstos
+- Necessidade de revisão de estratégias
+Riscos críticos poderão motivar ajustes no planejamento, desde que respeitadas as
+regras de controle de escopo definidas no Anexo 2.
+8. Integração com os Documentos do Projeto
+Este Anexo integra-se diretamente a:
+- Termo de Abertura do Projeto (TAP)
+- Anexo 2 – Gerenciamento de Escopo
+- Anexo 3 – Cronograma e Marcos
+Servindo como base formal para antecipação, mitigação e controle dos riscos
+do Projeto FokusLead.
+
+-- 6 of 6 --
+

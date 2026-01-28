@@ -1,0 +1,31 @@
+﻿@startuml
+
+title FokusLead - Camada de Nucleo (Usuario)
+
+class Usuario {
+  +id: UUID
+  +nome: string
+  +email: string
+  +senhaHash: string
+  +tipo: UsuarioTipo
+  +ativo: boolean
+  +dataCriacao: datetime
+}
+
+enum UsuarioTipo {
+  CORRETOR
+  GESTOR
+  ADMIN
+}
+
+class Cliente
+class Lead
+class Imovel
+class Agendamento
+
+Usuario "1" -- "0..*" Cliente : gerencia
+Usuario "1" -- "0..*" Lead : capta
+Usuario "1" -- "0..*" Imovel : gestao
+Usuario "1" -- "0..*" Agendamento : cria
+
+@enduml

@@ -1,0 +1,144 @@
+REIS DEVELOPER
+JORGE REIS - DESENVOLVEDOR FULLSTACK
+FokusLead
+FokusLead ONE FokusLead TEAM
+ANEXO COMPLEMENTAR 1
+STAKEHOLDERS
+
+-- 1 of 6 --
+
+FokusLead
+ANEXO 1 - STAKEHOLDERS 	REIS DEVELOPER - V 2.0
+Introdução e Objetivo do Documento
+Este documento tem como objetivo identificar, classificar, analisar e
+documentar de forma estruturada os stakeholders (partes interessadas) do projeto
+FokusLead, descrevendo seus papéis, responsabilidades, níveis de influência,
+expectativas, riscos associados e estratégias de engajamento. A correta gestão dos
+stakeholders é fator crítico para o sucesso do projeto, uma vez que o FokusLead é
+concebido como uma plataforma SaaS, dependente de adoção contínua, validação
+prática em ambiente real de mercado, integrações com APIs externas e evolução
+progressiva ao longo de ciclos semestrais.
+Este anexo complementa o Termo de Abertura do Projeto (TAP) e os demais
+documentos estratégicos, fornecendo base sólida para a tomada de decisão,
+mitigação de riscos, alinhamento entre visão de negócio, execução técnica e
+experiência do usuário, bem como sustentação da transição do projeto de iniciativa
+individual para produto escalável.
+Visão Geral dos Stakeholders
+Os stakeholders do projeto FokusLead são classificados em internos e
+externos, considerando o grau de poder decisório, o impacto no sucesso do projeto, o
+nível de envolvimento direto com o produto e a capacidade de influenciar sua adoção,
+evolução e sustentabilidade econômica. O projeto apresenta, em sua fase inicial, uma
+característica relevante: a concentração de múltiplos papéis estratégicos, táticos e
+operacionais em um único agente central. Essa condição exige clareza documental e
+governança bem definida para evitar conflitos de decisão, sobrecarga operacional e
+desalinhamentos à medida que o produto evolui e passa a envolver novos agentes.
+
+-- 2 of 6 --
+
+FokusLead
+ANEXO 1 - STAKEHOLDERS 	REIS DEVELOPER - V 2.0
+Estrutura Organizacional e Papéis-Chave
+No nível estratégico, o papel de Patrocinador do Projeto (Sponsor) é exercido
+por Jorge Reis, responsável pelo direcionamento estratégico, definição da visão de
+longo prazo, priorização de investimentos e aprovação de mudanças de alto impacto.
+Cabe a este papel garantir que o FokusLead permaneça alinhado aos objetivos de
+negócio, ao posicionamento de mercado e à estratégia de crescimento definida.
+No nível tático, o papel de Gerente de Projetos e Product Owner também é
+exercido por Jorge Reis, atuando como elo entre estratégia e execução. Este papel é
+responsável pelo planejamento do projeto, acompanhamento do cronograma,
+controle de riscos, definição de prioridades, validação de valor entregue e mediação
+entre demandas do mercado e restrições técnicas.
+No nível operacional, o papel de Desenvolvedor Fullstack é igualmente
+desempenhado por Jorge Reis, sendo responsável pela arquitetura do sistema,
+desenvolvimento do backend e frontend, modelagem de dados, integrações com APIs
+externas, segurança, performance, testes e evolução técnica contínua da plataforma.
+Além desses papéis centrais, o projeto prevê a ativação progressiva de grupos
+organizacionais de apoio, à medida que o produto evoluir. Esses grupos incluem áreas
+de Marketing, Jurídico, Financeiro, Gerência Geral e Coordenação de Vendas,
+responsáveis por sustentar a operação, o crescimento e a conformidade do produto
+em fases mais avançadas.
+
+-- 3 of 6 --
+
+FokusLead
+ANEXO 1 - STAKEHOLDERS 	REIS DEVELOPER - V 2.0
+Stakeholders Internos
+Os stakeholders internos compreendem todos os agentes diretamente
+envolvidos na concepção, desenvolvimento, gestão e sustentação do projeto
+FokusLead.
+O Patrocinador possui interesse principal no retorno sobre o investimento, no
+posicionamento do produto no mercado e na viabilidade de longo prazo do negócio,
+exercendo alto poder de influência sobre decisões estratégicas.
+O Gerente de Projetos / Product Owner tem como interesse central a execução
+eficiente do projeto, a geração contínua de valor e o controle rigoroso de escopo,
+prazos e riscos, possuindo igualmente alto poder de influência.
+O Desenvolvedor Fullstack concentra-se na qualidade técnica, estabilidade,
+segurança e escalabilidade da plataforma, sendo decisivo para a viabilidade técnica
+das decisões estratégicas.
+Os grupos de apoio organizacional, quando ativados, têm interesse na adoção
+do produto, no posicionamento de mercado, na conformidade legal, na
+sustentabilidade financeira e na viabilidade comercial do FokusLead. Seu poder de
+influência é considerado médio, porém relevante para a consolidação do produto.
+Stakeholders Externos
+Os stakeholders externos incluem usuários finais e fornecedores estratégicos.
+Os Corretores de Imóveis, usuários do FokusLead One, são stakeholders
+críticos, pois sua experiência de uso, satisfação e resultados comerciais influenciam
+diretamente a taxa de adoção, retenção e evolução funcional do produto.
+
+-- 4 of 6 --
+
+FokusLead
+ANEXO 1 - STAKEHOLDERS 	REIS DEVELOPER - V 2.0
+As Imobiliárias e Gestores Comerciais, usuários do FokusLead Team, possuem
+interesse na padronização de processos, controle operacional, escalabilidade e visão
+gerencial, exercendo alto poder de influência na consolidação do produto como
+solução corporativa.
+Os fornecedores de APIs e plataformas, especialmente a Meta (WhatsApp
+Business API e Instagram API), são stakeholders externos de alto impacto e alto risco.
+Alterações em políticas, limites de uso ou indisponibilidades técnicas podem
+comprometer funcionalidades centrais, exigir reengenharia e impactar diretamente a
+proposta de valor do FokusLead.
+Responsabilidades e Influência no Projeto
+O Patrocinador é responsável pela direção estratégica, aprovação de
+investimentos e validação de mudanças estruturais. Sua influência é alta e
+predominantemente positiva.
+O Gerente de Projetos / Product Owner responde pelo planejamento,
+priorização, mitigação de riscos e validação contínua do valor entregue, exercendo
+influência alta e direta sobre o sucesso do projeto.
+O Desenvolvedor Fullstack é responsável pela implementação técnica,
+qualidade do produto e viabilidade das soluções adotadas, com influência alta e
+determinante.
+Os usuários finais — corretores e imobiliárias — exercem influência alta, tanto
+positiva quanto negativa, por meio da adoção, retenção, feedback e validação
+funcional do produto.
+As áreas de apoio organizacional exercem influência média e positiva,
+sustentando marketing, conformidade legal, modelo financeiro e estratégia
+comercial.
+
+-- 5 of 6 --
+
+FokusLead
+ANEXO 1 - STAKEHOLDERS 	REIS DEVELOPER - V 2.0
+Os fornecedores de APIs exercem influência alta como risco externo, dada a
+dependência técnica do produto em relação a essas plataformas.
+Expectativas, Riscos e Estratégias de Engajamento
+As expectativas principais dos stakeholders incluem um produto simples,
+funcional e orientado a resultados, integrações estáveis com canais de captação de
+leads, evolução contínua baseada em uso real e clareza na proposta de valor e nos
+planos de assinatura. Os principais riscos relacionados aos stakeholders envolvem
+baixa adesão inicial dos usuários, dependência excessiva de APIs externas, conflitos
+entre visão de negócio e limitações técnicas, bem como sobrecarga do papel central
+do projeto.
+Como estratégias de mitigação, o projeto adota desenvolvimento incremental e
+modular, validação rápida do MVP, feedback contínuo dos usuários, governança clara,
+documentação consistente e uso de camadas de abstração para integrações
+externas.
+Considerações Finais
+A gestão estruturada dos stakeholders no projeto FokusLead é um dos pilares
+fundamentais para garantir controle, previsibilidade e crescimento sustentável. Este
+documento estabelece uma base sólida para a evolução futura do projeto,
+especialmente no processo de transição de uma iniciativa individual para uma
+plataforma SaaS escalável, com múltiplos agentes envolvidos.
+
+-- 6 of 6 --
+

@@ -1,0 +1,54 @@
+﻿@startuml
+
+title FokusLead - Visao Geral (Resumo Conceitual)
+
+package "Nucleo" {
+  class Usuario
+}
+
+package "CRM" {
+  class Cliente
+  class Lead
+  class InteresseCliente
+}
+
+package "Ativo Comercial" {
+  class Imovel
+}
+
+package "Vendas" {
+  class EtapaFunil
+  class Oportunidade
+}
+
+package "Produtividade" {
+  class Agendamento
+  class Interacao
+}
+
+package "Integracoes" {
+  class Integracao
+}
+
+Usuario --> Cliente : eixo operacional
+Cliente --> Imovel : ativo comercial
+Lead --> Cliente : evolucao
+InteresseCliente .. Cliente : resolve N:N
+InteresseCliente .. Imovel : resolve N:N
+Oportunidade --> EtapaFunil : funil
+Integracao ..> Lead : desacoplada
+Integracao ..> Interacao : desacoplada
+
+note right of Usuario
+Eixo operacional do sistema
+end note
+
+note right of Cliente
+Centro do CRM
+end note
+
+note right of Imovel
+Ativo comercial
+end note
+
+@enduml

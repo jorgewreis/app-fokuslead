@@ -1,0 +1,245 @@
+REIS DEVELOPER
+JORGE REIS - DESENVOLVEDOR FULLSTACK
+FokusLead
+FokusLead ONE FokusLead TEAM
+ANEXO COMPLEMENTAR 7
+ESTRUTURA ANALÍTICA
+
+-- 1 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+Introdução
+A Estrutura Analítica do Projeto (EAP), também denominada Work Breakdown
+Structure (WBS), representa a decomposição hierárquica de todo o trabalho
+necessário para a entrega completa do Programa FokusLead, abrangendo desde a
+construção da base imobiliária estrutural até a consolidação da plataforma como CRM
+imobiliário escalável, conforme definido no escopo global do projeto.
+Esta EAP não se limita ao MVP, constituindo a linha de base oficial de escopo do
+programa, sendo o principal instrumento para:
+- Planejamento e controle do cronograma semestral
+- Estimativa e acompanhamento de esforço e complexidade
+- Controle rigoroso de escopo e prevenção de scope creep
+- Gestão de riscos técnicos e operacionais
+- Validação objetiva das entregas por módulo
+- Comunicação clara entre direção estratégica e execução técnica
+Toda funcionalidade, integração ou evolução do produto deve estar
+explicitamente representada nesta estrutura.
+Estrutura da EAP – Visão Geral
+Nível 1 — Programa
+Programa FokusLead
+Nível 2 — Produtos
+FokusLead One
+FokusLead Team
+Nível 3 — Domínios Funcionais Globais
+Aplicáveis a todo o programa, com expansão progressiva conforme o módulo:
+- Interface, Experiência e Navegação
+- Gestão de Acesso, Usuários e Autenticação
+- Cadastro e Estrutura Imobiliária
+- Gestão de Imóveis e Portfólio
+- Gestão de Clientes e Leads
+
+-- 2 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+- Relacionamentos Comerciais Cliente ↔ Imóvel
+- Funil de Vendas e Processo Comercial
+- Agenda, Follow-ups e Produtividade
+- Integrações Externas (APIs)
+- Indicadores, Dashboards e Relatórios
+- Segurança da Informação e LGPD
+- Governança, Auditoria e Escalabilidade
+Estrutura Analítica Detalhada (Níveis 4 e 5)
+Interface, Experiência e Navegação
+Identidade Visual e Layout Base
+- Paleta de cores
+- Tipografia institucional
+- Grid, espaçamentos e padrões
+- Botões, ícones e ações
+- Formulários e estados visuais
+- Estilos globais reutilizáveis
+Telas de Acesso e Navegação Inicial
+- Tela de login
+- Validação de campos
+- Mensagens de erro e sucesso
+- Redirecionamento pós-login
+- Tratamento visual de sessão
+Telas Principais e Dashboards
+- Tela inicial
+- Dashboard operacional
+- Organização de widgets
+- Navegação entre módulos
+Componentes de Navegação
+- Menu principal
+
+-- 3 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+- Estados ativos
+- Breadcrumbs
+- Navegação contextual
+Listagens e Consultas
+- Padrão de listagens
+- Paginação
+- Ordenação
+- Ações rápidas
+- Feedback de carregamento
+Responsividade e Multiplataforma
+- Web Desktop
+- Web Mobile
+- PWA
+- iOS
+- Android
+Gestão de Acesso, Usuários e Autenticação
+Login e Sessão
+- Fluxo de autenticação
+- Criação e validação de sessão
+- Sessão expirada
+Gestão de Credenciais
+- Recuperação de senha
+- Tokens temporários
+- Regras de segurança
+Segurança de Acesso
+- Proteção de rotas
+- Limite de tentativas
+- Logs de autenticação
+
+-- 4 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+Gestão de Usuários (Team)
+- Cadastro de usuários
+- Perfis e permissões
+- Hierarquia e visibilidade
+Cadastro e Estrutura Imobiliária
+Construtoras e Incorporadoras
+- Modelagem de dados
+- Cadastro, edição e listagem
+- Exclusão lógica
+- Validações
+Empreendimentos
+- Vínculo obrigatório
+- Cadastro e edição
+- Consultas por construtora
+- Regras de dependência
+Localização
+- Cidades
+- Bairros
+- Vínculos obrigatórios
+Gestão de Imóveis e Portfólio
+Cadastro de Imóveis
+- Tipos de imóveis
+- Regras por categoria
+- Atributos comerciais
+Status e Disponibilidade
+- Disponível
+- Reservado
+- Vendido
+
+-- 5 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+- Inativo
+Consultas e Organização
+- Filtros
+- Busca avançada
+- Destaques comerciais
+Gestão de Clientes e Leads
+Cadastro de Clientes
+- Cadastro manual
+- Dados pessoais
+- Observações
+Gestão de Leads
+- Entidade Lead
+- Origem do lead
+- Data e canal
+- Evolução para cliente
+Histórico de Interações
+- Linha do tempo
+- Conversas
+- Anotações manuais
+Relacionamentos Cliente ↔ Imóvel
+Interesses do Cliente
+- Múltiplos imóveis por cliente
+Interessados no Imóvel
+- Múltiplos clientes por imóvel
+Preservação Histórica
+- Regras de exclusão
+
+-- 6 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+- Integridade do histórico
+Funil de Vendas e Processo Comercial
+Etapas do Funil
+- Novo
+- Em atendimento
+- Visita
+- Proposta
+- Fechado
+- Perdido
+Movimentação e Pipeline
+- Visualização do funil
+- Alteração de etapas
+Agenda, Follow-ups e Produtividade
+Agenda Comercial
+- Visitas
+- Compromissos
+Follow-ups
+- Lembretes
+- Pendências
+Integrações Externas
+WhatsApp Business API
+Instagram API
+Camada de abstração de integrações
+
+-- 7 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+Indicadores, Dashboards e Relatórios
+Indicadores Operacionais
+- Leads
+- Conversões
+- Tempo de resposta
+Dashboards Gerenciais (Team)
+Segurança da Informação e LGPD
+Proteção de Dados
+Anonimização
+Consentimento
+Governança, Auditoria e Escalabilidade
+Logs de Acesso
+Auditoria Básica
+Preparação para Escala
+Dicionário da EAP — Diretrizes Gerais
+Para todos os pacotes de trabalho:
+Responsável: Jorge Reis
+Critérios de Aceitação:
+- Funcionalidade aderente ao escopo aprovado
+- Ausência de falhas críticas
+- Fluxos principais operacionais
+Estimativas: Conforme cronograma semestral oficial
+Custos: Conforme planejamento financeiro do projeto
+
+-- 8 of 9 --
+
+FokusLead
+ANEXO 7 - ESTRUTURA ANALÍTICA 	REIS DEVELOPER - V 2.0
+Controle: Checklist de validação e testes por módulo
+Encerramento do Anexo
+Esta Estrutura Analítica representa a linha de base oficial do escopo do
+Programa FokusLead, sendo referência obrigatória para:
+- Controle de mudanças
+- Planejamento e execução dos ciclos semestrais
+- Avaliação de riscos
+- Validação das entregas
+Qualquer alteração nesta EAP deverá seguir formalmente o processo de
+controle de mudanças definido no Gerenciamento de Escopo.
+
+-- 9 of 9 --
+
