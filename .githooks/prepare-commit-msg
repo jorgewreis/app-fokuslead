@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Auto-bump VERSION based on the commit message type.
+# Rules:
+# - release => major bump
+# - feat/ux/refactor/perf => minor bump
+# - everything else => patch bump
+
+msg_file="${1:-}"
+source="${2:-}"
+
+if [[ "$source" == "commit" ]]; then
+  # Avoid bumping on amend.
+  exit 0
+fi
+
+if [[ -z "$msg_file" || ! -f "$msg_file" ]]; then
+  exit 0
+fi
+
+first_line="$(head -n 1 "$msg_file" | tr -d '\r')"
+type="$(printf '%s' "$first_line" | sed -nE 's/^([a-z]+)(\([^)]+\))?:.*/\1/p')"
+if [[ -z "$type" ]]; then
+  type="patch"
+fi
+
+version_file="VERSION"
+if [[ ! -f "$version_file" ]]; then
+  echo "V 1.00.00" > "$version_file"
+fi
+
+raw="$(tr -d '\r' < "$version_file")"
+raw="${raw#V }"
+raw="${raw#v }"
+IFS='.' read -r major minor patch <<< "$raw"
+
+major="${major:-1}"
+minor="${minor:-0}"
+patch="${patch:-0}"
+
+re='^[0-9]+$'
+if [[ ! "$major" =~ $re ]]; then major=1; fi
+if [[ ! "$minor" =~ $re ]]; then minor=0; fi
+if [[ ! "$patch" =~ $re ]]; then patch=0; fi
+
+bump="patch"
+case "$type" in
+  release) bump="major" ;;
+  feat|ux|refactor|perf) bump="minor" ;;
+  *) bump="patch" ;;
+esac
+
+if [[ "$bump" == "major" ]]; then
+  major=$((major + 1))
+  minor=0
+  patch=0
+elif [[ "$bump" == "minor" ]]; then
+  minor=$((minor + 1))
+  patch=0
+else
+  patch=$((patch + 1))
+  if [[ "$patch" -gt 99 ]]; then
+    patch=0
+    minor=$((minor + 1))
+  fi
+fi
+
+if [[ "$minor" -gt 99 ]]; then
+  minor=0
+  major=$((major + 1))
+fi
+
+printf "V %d.%02d.%02d\n" "$major" "$minor" "$patch" > "$version_file"
+git add "$version_file" >/dev/null 2>&1 || true
