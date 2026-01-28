@@ -63,7 +63,7 @@ Para o gestor, o sistema se torna uma fonte confiavel de indicadores, com visao 
 
 **Exemplo de uso:** o gestor acompanha conversao por etapa, identifica gargalos e padroniza o atendimento da equipe. Com isso, consegue orientar ajustes de pitch e priorizar leads com maior propensao de fechamento.
 
-<h2><span style="color:#1c7ed6">:database: Arquitetura de dados (resumo)</span></h2>
+<h2><span style="color:#1c7ed6">:database: Arquitetura de dados</span></h2>
 
 Modelo pensado para integridade, rastreabilidade e auditoria, com historico completo das mudancas mais relevantes. A estrutura garante consistencia entre clientes, imoveis, leads e oportunidades.
 

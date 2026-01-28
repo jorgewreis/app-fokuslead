@@ -1,21 +1,78 @@
-MIT License
+﻿FokusLead Licença Proprietária (Versão Oficial)
 
 Copyright (c) 2026 Jorge Reis
+Todos os direitos reservados.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Concessão de direitos
+Este repositório e seu conteúdo (o "Software") são disponibilizados publicamente
+apenas para visualização e avaliação. Nenhuma licença ou outro direito é concedido
+para uso, cópia, modificação, tradução, mesclagem, publicação, distribuição,
+sublicenciamento ou venda do Software, no todo ou em parte, sem autorização
+expressa e por escrito do titular dos direitos.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. Restrições
+É estritamente proibido:
+- usar o Software em produção, inclusive como serviço (SaaS), API ou produto;
+- criar obras derivadas ou adaptar o Software para outro fim;
+- remover ou alterar avisos de direitos autorais e marcas;
+- redistribuir o Software ou qualquer parte dele a terceiros.
 
+3. Autorização expressa
+Qualquer uso além da visualização pública requer autorização expressa e por escrito
+do titular dos direitos. A autorização pode impor termos comerciais e técnicos
+específicos.
+
+4. Marcas e nome comercial
+Nenhum direito sobre marcas, nomes comerciais, logotipos ou identidade visual é
+concedido por esta licença.
+
+5. Isenção de garantia
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUER
+TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, ENTRE OUTRAS, GARANTIAS DE
+COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO.
+
+6. Limitação de responsabilidade
+EM NENHUMA HIPÓTESE OS AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO
+RESPONSÁVEIS POR QUAISQUER REIVINDICAÇÕES, DANOS OU OUTRAS RESPONSABILIDADES,
+SEJAM ELAS DECORRENTES DE CONTRATO, ATO ILÍCITO OU OUTRA FORMA, RELACIONADAS AO
+SOFTWARE OU AO SEU USO OU OUTRAS OPERAÇÕES.
+
+<div style="color:#9aa0a6">
+FokusLead Proprietary License (English Reference)
+
+Copyright (c) 2026 Jorge Reis
+All Rights Reserved.
+
+1. Grant of rights
+This repository and its contents (the "Software") are made publicly available
+for viewing and evaluation only. No license or other rights are granted to use,
+copy, modify, translate, merge, publish, distribute, sublicense, or sell the
+Software, in whole or in part, without express written permission from the
+copyright holder.
+
+2. Restrictions
+It is strictly prohibited to:
+- use the Software in production, including as a service (SaaS), API, or product;
+- create derivative works or adapt the Software for other purposes;
+- remove or alter copyright or trademark notices;
+- redistribute the Software or any part of it to third parties.
+
+3. Express permission
+Any use beyond public viewing requires express written permission from the
+copyright holder, which may impose specific commercial and technical terms.
+
+4. Trademarks and trade names
+No rights to trademarks, trade names, logos, or visual identity are granted by
+this license.
+
+5. Disclaimer of warranty
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+6. Limitation of liability
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+</div>
