@@ -175,15 +175,10 @@ Este documento define a arquitetura de software e o conjunto de tecnologias adot
 - **Lint/format:** ESLint
 - **Padrão de commits:** Conforme `COMMITS.md` (formato `tipo: descrição`)
 - **Versionamento:** V 1.00.00 (1a parte = release completa; 2a parte = grandes implementações; 3a parte = qualquer implementação ou correção). Ao atingir 99 na 3a parte, zera e incrementa a 2a parte. Em cada release, incrementa a 1a parte e zera as demais.
+- **Automação:** hooks `commit-msg` + `post-commit` atualizam o arquivo `VERSION` conforme o tipo do commit.
 
 ## 12. Riscos técnicos e mitigação
 
 - Dependência de APIs externas (WhatsApp/Instagram) e suas políticas.
 - Crescimento exponencial pode exigir extração modular futura.
 - Operação em AWS demanda curva de aprendizado inicial.
-
-## 13. Itens em aberto
-
-- Sem itens em aberto no momento.
-
-
