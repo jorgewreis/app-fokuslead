@@ -4,6 +4,7 @@ set -euo pipefail
 # Auto-bump VERSION based on the commit message type.
 # Rules:
 # - release => major bump
+# - >100 files changed => minor bump
 # - feat/ux/refactor/perf => minor bump
 # - everything else => patch bump
 
@@ -46,11 +47,20 @@ if [[ ! "$minor" =~ $re ]]; then minor=0; fi
 if [[ ! "$patch" =~ $re ]]; then patch=0; fi
 
 bump="patch"
-case "$type" in
-  release) bump="major" ;;
-  feat|ux|refactor|perf) bump="minor" ;;
-  *) bump="patch" ;;
-esac
+if [[ "$type" == "release" ]]; then
+  bump="major"
+else
+  file_count="$(git diff --cached --name-only | sed '/^$/d' | wc -l | tr -d ' ')"
+  file_count="${file_count:-0}"
+  if [[ "$file_count" -gt 100 ]]; then
+    bump="minor"
+  else
+    case "$type" in
+      feat|ux|refactor|perf) bump="minor" ;;
+      *) bump="patch" ;;
+    esac
+  fi
+fi
 
 if [[ "$bump" == "major" ]]; then
   major=$((major + 1))
@@ -58,18 +68,14 @@ if [[ "$bump" == "major" ]]; then
   patch=0
 elif [[ "$bump" == "minor" ]]; then
   minor=$((minor + 1))
-  patch=0
 else
   patch=$((patch + 1))
-  if [[ "$patch" -gt 99 ]]; then
-    patch=0
-    minor=$((minor + 1))
-  fi
 fi
 
 if [[ "$minor" -gt 99 ]]; then
   minor=0
   major=$((major + 1))
+  patch=0
 fi
 
 new_version="$(printf "V %d.%02d.%02d" "$major" "$minor" "$patch")"

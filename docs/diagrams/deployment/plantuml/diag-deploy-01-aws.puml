@@ -1,0 +1,62 @@
+@startuml
+
+title FokusLead - Implantacao AWS
+
+actor "Usuarios" as Users
+cloud "Internet" as Internet
+
+cloud "AWS" {
+  node "VPC" {
+    node "Public Subnet" {
+      [CloudFront]
+      [ALB]
+    }
+    node "Private Subnet" {
+      node "ECS Fargate" {
+        [Web SSR (Next.js)]
+        [API (NestJS)]
+      }
+      database "RDS MySQL" as RDS
+      [Redis]
+    }
+  }
+  [S3]
+  [Secrets Manager]
+  [CloudWatch]
+  [ECR]
+}
+
+cloud "Integracoes Externas" {
+  [WhatsApp Business API]
+  [Instagram Graph API]
+  [Google OAuth]
+}
+
+cloud "CI/CD" {
+  [GitHub Actions]
+}
+
+Users --> Internet
+Internet --> CloudFront : HTTPS
+CloudFront --> S3 : assets estaticos
+CloudFront --> ALB : SSR/API
+ALB --> [Web SSR (Next.js)]
+ALB --> [API (NestJS)]
+
+[Web SSR (Next.js)] --> [API (NestJS)]
+[API (NestJS)] --> RDS
+[API (NestJS)] --> [Redis]
+
+[API (NestJS)] --> [WhatsApp Business API]
+[API (NestJS)] --> [Instagram Graph API]
+[Web SSR (Next.js)] --> [Google OAuth]
+
+[API (NestJS)] --> [Secrets Manager]
+[Web SSR (Next.js)] --> [Secrets Manager]
+[API (NestJS)] --> [CloudWatch]
+[Web SSR (Next.js)] --> [CloudWatch]
+
+[GitHub Actions] --> [ECR]
+[ECR] --> [ECS Fargate]
+
+@enduml
