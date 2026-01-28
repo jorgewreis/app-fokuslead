@@ -1,0 +1,33 @@
+@startuml
+
+title FokusLead - Sequencia Conversao de Lead em Cliente
+
+actor Corretor
+participant "Frontend" as Front
+participant "Lead Service" as LeadSvc
+participant "Cliente Service" as ClienteSvc
+participant "Oportunidade Service" as OportunidadeSvc
+database "CRM DB" as DB
+participant "Auditoria Service" as Audit
+
+Corretor -> Front : aciona "Converter lead"
+Front -> LeadSvc : solicitar conversao
+LeadSvc -> DB : buscar lead
+alt lead invalido ou ja convertido
+  LeadSvc --> Front : erro de regra
+else lead valido
+  LeadSvc -> ClienteSvc : criar ou vincular cliente
+  ClienteSvc -> DB : buscar cliente por contato
+  alt cliente nao existe
+    ClienteSvc -> DB : cria cliente
+  else cliente existe
+    ClienteSvc -> DB : vincula lead ao cliente
+  end
+  LeadSvc -> OportunidadeSvc : abrir oportunidade
+  OportunidadeSvc -> DB : cria oportunidade
+  LeadSvc -> DB : atualiza status = CONVERTIDO
+  LeadSvc -> Audit : grava auditoria
+  LeadSvc --> Front : conversao confirmada
+end
+
+@enduml

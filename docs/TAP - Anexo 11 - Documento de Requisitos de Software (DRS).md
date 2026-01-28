@@ -124,21 +124,43 @@ O FokusLead é um CRM imobiliário multiplataforma que centraliza leads, cliente
 
 ## 6. Modelos do sistema
 
-Os modelos conceituais e diagramas de classes estão documentados em PlantUML, na pasta `docs/diagramas`.
+Os diagramas estao organizados por tipo em `docs/diagramas`, com fontes em PlantUML e imagens por categoria.
 
-Arquivos principais:
+Casos de uso:
 
-- `docs/diagramas/02-camada-nucleo-usuario.puml`
-- `docs/diagramas/03-estrutura-imobiliaria.puml`
-- `docs/diagramas/04-gestao-comercial.puml`
-- `docs/diagramas/05-funil-vendas.puml`
-- `docs/diagramas/06-comunicacao-produtividade.puml`
-- `docs/diagramas/07-integracoes-auditoria.puml`
-- `docs/diagramas/08-visao-geral-conceitual.puml`
-- `docs/diagramas/09-sequencia-captura-lead-whatsapp.puml`
-- `docs/diagramas/10-atividade-funil-vendas.puml`
-- `docs/diagramas/11-estado-imovel.puml`
-- `docs/diagramas/12-componentes-integracoes.puml`
+- `docs/diagramas/casos-de-uso/plantuml/01-casos-de-uso-fokuslead.puml`
+
+Diagramas de classes (modelos conceituais):
+
+- `docs/diagramas/classes/plantuml/02-camada-nucleo-usuario.puml`
+- `docs/diagramas/classes/plantuml/03-estrutura-imobiliaria.puml`
+- `docs/diagramas/classes/plantuml/04-gestao-comercial.puml`
+- `docs/diagramas/classes/plantuml/05-funil-vendas.puml`
+- `docs/diagramas/classes/plantuml/06-comunicacao-produtividade.puml`
+- `docs/diagramas/classes/plantuml/07-integracoes-auditoria.puml`
+- `docs/diagramas/classes/plantuml/08-visao-geral-conceitual.puml`
+- `docs/diagramas/classes/plantuml/13-diagrama-classes.puml`
+
+Diagramas de sequencia:
+
+- `docs/diagramas/sequencia/plantuml/01-sequencia-captura-lead-whatsapp.puml`
+- `docs/diagramas/sequencia/plantuml/02-sequencia-captura-lead-instagram.puml`
+- `docs/diagramas/sequencia/plantuml/03-sequencia-login-google.puml`
+- `docs/diagramas/sequencia/plantuml/04-sequencia-conversao-lead-cliente.puml`
+- `docs/diagramas/sequencia/plantuml/05-sequencia-mudanca-etapa-funil.puml`
+- `docs/diagramas/sequencia/plantuml/09-sequencia-captura-lead-whatsapp.puml`
+
+Diagrama de atividade:
+
+- `docs/diagramas/atividade/plantuml/10-atividade-funil-vendas.puml`
+
+Diagrama de estados:
+
+- `docs/diagramas/estados/plantuml/11-estado-imovel.puml`
+
+Diagrama de componentes:
+
+- `docs/diagramas/componentes/plantuml/12-componentes-integracoes.puml`
 
 ## 7. Evolução e apêndices
 

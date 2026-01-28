@@ -1,0 +1,218 @@
+@startuml
+
+title FokusLead - Diagrama de Classes (Consolidado)
+
+package "Nucleo" {
+  class Usuario {
+    +id: UUID
+    +nome: string
+    +email: string
+    +senhaHash: string
+    +tipo: UsuarioTipo
+    +ativo: boolean
+    +dataCriacao: datetime
+  }
+
+  enum UsuarioTipo {
+    CORRETOR
+    GESTOR
+    ADMIN
+  }
+}
+
+package "CRM" {
+  class Cliente {
+    +id: UUID
+    +nome: string
+    +telefone: string
+    +email: string
+    +perfilFinanceiro: string
+    +dataCadastro: datetime
+  }
+
+  class Lead {
+    +id: UUID
+    +origem: LeadOrigem
+    +dataEntrada: datetime
+    +status: LeadStatus
+  }
+
+  enum LeadOrigem {
+    WHATSAPP
+    INSTAGRAM
+  }
+
+  enum LeadStatus {
+    NOVO
+    EM_ATENDIMENTO
+    CONVERTIDO
+  }
+
+  class InteresseCliente {
+    +id: UUID
+    +dataInteresse: datetime
+    +prioridade: InteressePrioridade
+    +observacoes: string
+  }
+
+  enum InteressePrioridade {
+    QUENTE
+    MORNO
+    FRIO
+  }
+}
+
+package "Imobiliario" {
+  class Construtora {
+    +id: UUID
+    +nome: string
+    +cnpj: string
+    +status: string
+  }
+
+  class Empreendimento {
+    +id: UUID
+    +nome: string
+    +descricao: string
+    +status: string
+  }
+
+  class Imovel {
+    +id: UUID
+    +codigo: string
+    +valor: decimal
+    +status: ImovelStatus
+    +area: decimal
+    +quartos: int
+    +vagas: int
+  }
+
+  enum ImovelStatus {
+    DISPONIVEL
+    RESERVADO
+    VENDIDO
+  }
+
+  class TipoImovel {
+    +id: UUID
+    +nome: string
+  }
+
+  class Cidade {
+    +id: UUID
+    +nome: string
+    +uf: string
+  }
+
+  class Bairro {
+    +id: UUID
+    +nome: string
+  }
+}
+
+package "Vendas" {
+  class Funil {
+    +id: UUID
+    +nome: string
+    +ativo: boolean
+  }
+
+  class EtapaFunil {
+    +id: UUID
+    +nome: string
+    +ordem: int
+  }
+
+  class Oportunidade {
+    +id: UUID
+    +valorEstimado: decimal
+    +dataCriacao: datetime
+    +status: string
+  }
+}
+
+package "Produtividade" {
+  class Interacao {
+    +id: UUID
+    +tipo: InteracaoTipo
+    +conteudo: string
+    +dataHora: datetime
+  }
+
+  enum InteracaoTipo {
+    MENSAGEM
+    NOTA
+    LIGACAO
+  }
+
+  class Agendamento {
+    +id: UUID
+    +tipo: AgendamentoTipo
+    +dataHora: datetime
+    +status: string
+  }
+
+  enum AgendamentoTipo {
+    VISITA
+    RETORNO
+  }
+}
+
+package "Integracoes" {
+  class Integracao {
+    +id: UUID
+    +tipo: IntegracaoTipo
+    +status: string
+    +token: string
+    +ultimaSincronizacao: datetime
+  }
+
+  enum IntegracaoTipo {
+    WHATSAPP
+    INSTAGRAM
+  }
+}
+
+package "Auditoria" {
+  class Auditoria {
+    +id: UUID
+    +entidade: string
+    +entidadeId: UUID
+    +acao: string
+    +antesDepois: string
+    +dataHora: datetime
+    +ip: string
+  }
+}
+
+Usuario "1" -- "0..*" Cliente : gerencia
+Usuario "1" -- "0..*" Lead : capta
+Usuario "1" -- "0..*" Imovel : gestao
+Usuario "1" -- "0..*" Interacao : registra
+Usuario "1" -- "0..*" Agendamento : cria
+Usuario "1" -- "0..*" Oportunidade : responsavel
+Usuario "1" -- "0..*" Auditoria : gera
+
+Cliente "0..*" -- "0..1" Lead : conversao
+Cliente "1" -- "0..*" InteresseCliente
+Imovel "1" -- "0..*" InteresseCliente
+
+Funil "1" -- "1..*" EtapaFunil
+EtapaFunil "1" -- "0..*" Oportunidade
+Cliente "1" -- "0..*" Oportunidade
+Imovel "1" -- "0..*" Oportunidade
+
+Construtora "1" -- "0..*" Empreendimento
+Empreendimento "0..1" -- "0..*" Imovel
+TipoImovel "1" -- "0..*" Imovel
+Cidade "1" -- "0..*" Bairro
+Bairro "1" -- "0..*" Imovel
+
+Cliente "1" -- "0..*" Interacao
+Cliente "1" -- "0..*" Agendamento
+Imovel "0..*" -- "0..1" Agendamento
+
+Integracao "1" -- "0..*" Lead
+Integracao "1" -- "0..*" Interacao
+
+@enduml
