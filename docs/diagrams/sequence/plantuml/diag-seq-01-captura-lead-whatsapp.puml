@@ -1,0 +1,29 @@
+@startuml
+
+title FokusLead - Sequencia Captura Lead WhatsApp
+
+actor Lead
+participant "WhatsApp Business API" as WhatsApp
+participant "Webhook Controller" as Webhook
+participant "Integracao Service" as Integracao
+participant "Lead Service" as LeadSvc
+database "CRM DB" as DB
+participant "Auditoria Service" as Audit
+participant "Notificacao Service" as Notif
+
+Lead -> WhatsApp : envia mensagem
+WhatsApp -> Webhook : POST /webhook (evento)
+Webhook -> Integracao : valida assinatura\nnormaliza payload
+Integracao -> LeadSvc : upsertLead + registrarInteracao
+LeadSvc -> DB : consulta lead por telefone
+alt lead nao existe
+  LeadSvc -> DB : cria lead
+else lead existe
+  LeadSvc -> DB : atualiza status/interesse
+end
+LeadSvc -> DB : registra interacao
+LeadSvc -> Audit : grava auditoria
+LeadSvc -> Notif : notifica corretor
+Webhook --> WhatsApp : 200 OK
+
+@enduml

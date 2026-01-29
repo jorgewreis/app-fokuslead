@@ -1,0 +1,41 @@
+﻿@startuml
+
+title FokusLead - Comunicacao e Produtividade
+
+class Interacao {
+  +id: UUID
+  +tipo: InteracaoTipo
+  +conteudo: string
+  +dataHora: datetime
+}
+
+enum InteracaoTipo {
+  MENSAGEM
+  NOTA
+  LIGACAO
+}
+
+class Agendamento {
+  +id: UUID
+  +tipo: AgendamentoTipo
+  +dataHora: datetime
+  +status: string
+}
+
+enum AgendamentoTipo {
+  VISITA
+  RETORNO
+}
+
+class Cliente <<ref>>
+class Usuario <<ref>>
+class Imovel <<ref>>
+
+Cliente "1" -- "0..*" Interacao
+Usuario "1" -- "0..*" Interacao
+
+Cliente "1" -- "0..*" Agendamento
+Usuario "1" -- "0..*" Agendamento
+Imovel "0..*" -- "0..1" Agendamento
+
+@enduml

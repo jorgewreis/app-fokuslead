@@ -1,0 +1,33 @@
+flowchart LR
+  classDef actor fill:#ffffff,stroke:#333333,stroke-width:1px;
+  classDef usecase fill:#f5f5f5,stroke:#333333,stroke-width:1px,rx:12,ry:12;
+
+  Corretor([Corretor]):::actor
+  Imobiliaria([Imobiliaria]):::actor
+  Admin([Admin]):::actor
+
+  subgraph FokusLead["FokusLead - Casos de Uso (MVP)"]
+    UC1([Cadastrar imovel]):::usecase
+    UC2([Cadastrar lead]):::usecase
+    UC3([Classificar lead]):::usecase
+    UC4([Registrar interacao]):::usecase
+    UC5([Gerenciar funil]):::usecase
+    UC6([Gerenciar usuarios (Team)]):::usecase
+    UC7([Configurar tags]):::usecase
+    UC8([Visualizar indicadores]):::usecase
+  end
+
+  Corretor --> UC1
+  Corretor --> UC2
+  Corretor --> UC3
+  Corretor --> UC4
+  Corretor --> UC5
+  Corretor --> UC7
+  Corretor --> UC8
+
+  Imobiliaria --> UC5
+  Imobiliaria --> UC6
+  Imobiliaria --> UC8
+
+  Admin --> UC6
+  Admin --> UC8

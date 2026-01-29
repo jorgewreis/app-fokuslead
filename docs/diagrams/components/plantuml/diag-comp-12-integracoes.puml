@@ -1,0 +1,47 @@
+﻿@startuml
+
+title FokusLead - Componentes e Integracoes
+
+package "Canais" {
+  [Web Desktop]
+  [Web Mobile]
+  [PWA]
+  [iOS App]
+  [Android App]
+}
+
+package "Backend" {
+  [API REST]
+  [Servico de Autenticacao]
+  [Servico de CRM]
+  [Servico de Integracoes]
+  [Servico de Notificacoes]
+}
+
+database "Banco de Dados" as DB
+queue "Fila de Eventos" as Queue
+
+package "Integracoes Externas" {
+  [WhatsApp Business API]
+  [Instagram API]
+}
+
+[Web Desktop] --> [API REST]
+[Web Mobile] --> [API REST]
+[PWA] --> [API REST]
+[iOS App] --> [API REST]
+[Android App] --> [API REST]
+
+[API REST] --> [Servico de Autenticacao]
+[API REST] --> [Servico de CRM]
+[API REST] --> [Servico de Integracoes]
+[API REST] --> [Servico de Notificacoes]
+
+[Servico de CRM] --> DB
+[Servico de Autenticacao] --> DB
+[Servico de Integracoes] --> Queue
+[Servico de Integracoes] --> [WhatsApp Business API]
+[Servico de Integracoes] --> [Instagram API]
+[Servico de Notificacoes] --> Queue
+
+@enduml

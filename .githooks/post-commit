@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ "${SKIP_VERSION_BUMP:-}" == "1" ]]; then
+  exit 0
+fi
+
+git_dir="$(git rev-parse --git-path .)"
+flag="$git_dir/version-bump"
+
+if [[ ! -f "$flag" ]]; then
+  exit 0
+fi
+
+rm -f "$flag"
+
+git add VERSION >/dev/null 2>&1 || true
+SKIP_VERSION_BUMP=1 git commit --amend --no-edit --no-verify >/dev/null 2>&1 || true
