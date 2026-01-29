@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-# Version bump handled in commit-msg + post-commit to ensure VERSION is included.
-exit 0
